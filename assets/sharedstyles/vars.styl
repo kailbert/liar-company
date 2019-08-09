@@ -1,0 +1,90 @@
+// Assetpath relativ
+$assetspath = "@assets/"
+
+// 🎨 COLORS
+my-colors = {
+	black: #021725
+	white: #ffffff
+	bg: #000000
+	text: #ffffff
+	primary:#AE884E
+	secondary:#b6cd1a
+	red: #FB6255
+}
+for name, color in my-colors
+	define('$'+name color)
+
+// 🚶‍ ANIMATION
+ease = cubic-bezier(0.4, 0, 0.2, 1)
+timing = .5s
+
+animationbooster()
+	transform translateZ(0)
+	perspective 1000
+	backface-visibility hidden
+	// will-change transform //CHROME Bug
+loop(until = 10)
+	for i in (1..until)
+		&:nth-child({i})
+			animation-delay (166ms * i)
+
+// ⚡ BREAKPOINTS 
+$bp1=769px
+$bp2=1380px
+bp(var)
+	@media screen and (max-width:var)
+		{block}
+
+// 🤙 CUSTOM
+
+$pagewidth = 820px
+
+regular()
+	font-family 'Inter-Regular'
+	font-weight normal
+bold()
+	font-family 'Inter-Bold'
+	font-weight normal
+mono()
+	font-family 'Inconsolata', monospace
+	font-weight normal
+
+my-shadow(color = black)
+	box-shadow 0 30px 30px -15px rgba(color,.2)
+
+section()
+	max-width $pagewidth
+	margin 0 auto
+	padding 60px 40px
+	+bp($bp1)
+		padding 40px 20px
+iconsection()
+	display grid
+	grid-template-columns 38px auto
+	grid-gap 20px
+	+bp($bp1)
+		display block
+	.sectionicon
+		svg
+			max-height 42px
+		.feather
+			display flex
+			svg
+				display flex
+				width 100%
+				height 100%
+		+bp($bp1)
+			.feather
+				display block
+				svg
+					display block
+					width 48px
+					height @width
+					margin-bottom 12px
+			svg
+				display block
+				width 48px
+				height @width
+				margin-bottom 12px
+				
+	

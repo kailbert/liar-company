@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata')
+$pathToFonts = '~assets/fonts/'
+
+$fonts = Inter-Bold Inter-Regular
+
+for font in $fonts   
+	@font-face
+		font-family font
+		src url($pathToFonts + font'.woff') format('woff')
+		font-weight normal
+		font-style normal
+
+regular()
+	font-family 'Inter-Regular'
+	font-weight normal
+bold()
+	font-family 'Inter-Bold'
+	font-weight normal
+
+mono()
+	font-family 'Inconsolata', monospace
+	font-weight normal
+
+body
+	regular()
+p
+	line-height 1.666
+p,a,li
+	+bp($bp1)
+		font-size 1.3rem
+
+h1,h2,h3,h4
+	bold()
+h1
+	font-size 42px
+	line-height 1.2
+	+bp($bp1)
+		font-size 32px
+h2
+	font-size 32px
+	line-height 1.25
+	+bp($bp1)
+		font-size 24px
+		line-height 1.2
+h3
+	font-size 26px
+	line-height 1.3
+	margin-bottom 8px
+	+bp($bp1)
+		font-size 20px
+		line-height 1.2
+h4
+	font-size 20px
+	line-height 1.4
+h5
+	font-size 9px
+	letter-spacing 3.4px
+	text-transform uppercase
+	line-height 1.6
+	bold()
+a,p a
+	text-decoration none
+	bold()
+	color $primary
+p
+	color darken($text,40%)
+	a
+		color $primary
+	+ p
+		margin-top 16px
+	code
+		background lighten($bg,8%)
+		color $white
+		padding 2px 6px
+		border-radius 3px
+		mono()
+		font-weight 700
+code
+	mono()
+ul
+	li
+		list-style-type none
+		line-height 1.6
+hr
+	height 1px
+	background $border
+	border none
+	margin 12px 0
+p.small
+	font-size 11px
+	letter-spacing .2px
+p.dropcap:first-letter 
+	bold()
+	font-size 5.4rem
+	float left
+	line-height 0.6
+	padding-top 1rem
+	margin-left -0rem
+	margin-right .8rem
+	margin-bottom -0rem
+	display block
+	position relative
+	+bp($bp1)
+		font-size 5rem
+		padding-top .7rem
+p b, b, strong
+	bold()
+.icon
+	color inherit
+	width 24px
+	height @width
+	display inline-block
+	svg
+		max-width 100%
+		max-height 100%
+.btn,button
+	border none
+	color $white
+	line-height 2
+	cursor ponter
+	bold()
+	font-size 14px
+	display inline-block
+	border-radius 3px
+	padding 8px 16px 8px 16px
+	margin-top 20px
+	appearance none
+	text-align center
+	background $primary
+	&:hover
+		color $white
+		background lighten(@background,10%)
+		cursor pointer
+	&:focus,&:active
+		outline none
+		box-shadow none
+		background darken(@background,10%)
+	span
+		regular()
+	position relative
+	i
+		margin-right 8px
+		vertical-align top
+		svg
+			width 22px
+			height @width
+			transform translateY(3px)
+	+ .btn
+		margin-left 16px
+		+bp($bp1)
+			margin-left 0
+.btn-secondary
+	background transparent
+	box-shadow inset 0 0 0 2px $bg
+	color $text
+	&:hover
+		background $bg
+		color $text
+		box-shadow inset 0 0 0 2px $bg
+	&:focus,&:active
+		background darken($bg,5%)
+.btn-small
+	padding 4px 12px
+	line-height 1.6
+	font-size 12px
+	margin-top 12px
+	i
+		margin-right 3px
+		svg
+			width 12px
+			height @width
+.btn-disabled
+	cursor no-drop
+	color lighten($text,50%)
+	box-shadow none
+	background lighten($text,85%)
+	pointer-events none
+

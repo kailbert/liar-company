@@ -1,0 +1,47 @@
+$transitionspeed = 233ms
+
+.pageup-enter-active
+	animation pageup $transitionspeed ease
+.pageup-leave-active
+	animation pageup $transitionspeed ease reverse
+@keyframes pageup
+	0%
+		opacity 0
+		transform translate3d(0,20px,0)
+	100%
+		opacity 1
+		transform translate3d(0,0px,0)
+
+.pageleft-enter-active
+	animation pageleft $transitionspeed ease
+.pageleft-leave-active
+	animation pageleft $transitionspeed ease reverse
+@keyframes pageleft
+	0%
+		opacity 0
+		transform translate3d(20px,0,0)
+	100%
+		opacity 1
+		transform translate3d(0,0px,0)
+
+.pageright-enter-active
+	animation pageleft $transitionspeed ease
+.pageright-leave-active
+	animation pageleft $transitionspeed ease reverse
+@keyframes pageleft
+	0%
+		opacity 0
+		transform translate3d(-20px,0,0)
+	100%
+		opacity 1
+		transform translate3d(0,0px,0)
+
+.fade-enter-active
+	animation fade $transitionspeed ease
+.fade-leave-active
+	animation fade $transitionspeed ease reverse
+@keyframes fade
+	0%
+		opacity 0
+	100%
+		opacity 1

@@ -1,0 +1,31 @@
+{
+  "name": "liar-company",
+  "version": "1.0.0",
+  "description": "liar company frontend",
+  "author": "Sean",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/markdownit": "^1.2.3",
+    "@nuxtjs/style-resources": "^0.1.2",
+    "animejs": "^3.0.1",
+    "cross-env": "^5.2.0",
+    "feather-icons": "^4.21.0",
+    "moment": "^2.24.0",
+    "nuxt": "^2.4.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "request": "^2.88.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
