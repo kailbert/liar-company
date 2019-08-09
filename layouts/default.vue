@@ -18,7 +18,6 @@ export default {
 <style lang="stylus" src="./styles/typography.styl"></style>
 <style lang="stylus" src="./styles/pagetransitions.styl"></style>
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
 body
   color $text
   background $bg
