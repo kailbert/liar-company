@@ -15,7 +15,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: "LIAR - eine außergewöhnliche Theaterproduktion bestehend aus physischem Theater, Bewegung, Akrobatik, speziellen Effekten, Live-Musik und vor allem: viel Humor."}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap"}
     ]
   },
   generate: {
