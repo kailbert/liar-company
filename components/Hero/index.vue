@@ -2,13 +2,11 @@
     div
         .hero
             .text(v-if="isEng")
-                h1 {{text.title}}
-                h2 {{text.subtitle}}
+                img(:src="liarImg")
                 p {{text.en.subtitle}}
                 a(:href="text.trailer" target="_blank").btn Watch Trailer
             .text(v-else)
-                h1 {{text.title}}
-                h2 {{text.subtitle}}
+                img(:src="liarImg")
                 p {{text.de.subtitle}}
                 a(:href="text.trailer" target="_blank").btn Trailer ansehen
         .intro(v-if="isEng")
@@ -32,6 +30,7 @@
 
 <script>
 import texts from "~/content/Texts.js"
+import liarImg from './liar.jpg'
 
 export default {
     props:{
@@ -42,7 +41,8 @@ export default {
     },
     data(){
         return{
-            text:texts
+            text:texts,
+            liarImg
         }
     }
 }
@@ -80,6 +80,12 @@ export default {
         text-align center
         max-width 720px
         padding 2rem
+        +bp($bp1)
+            margin-top 5rem
+        img
+            border-radius .3rem
+            max-width 520px
+            margin 0 auto
         h1
             font-size 10vw
             margin-bottom 0rem
