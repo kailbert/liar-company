@@ -6,13 +6,13 @@
                 p {{text.en.subtitle}}
                 .btn-group
                     a(:href="text.trailer" target="_blank").btn Watch Trailer
-                    a(href="https://pfefferberg-theater.de/" target="_blank" rel="noopener").btn.btn-primary Buy Tickets
+                    a(href="https://pfefferberg-theater.de/spielplan/kalender/?event-id=12575" target="_blank" rel="noopener").btn.btn-primary Buy Tickets
             .text(v-else)
                 img(:src="liarImg")
                 p {{text.de.subtitle}}
                 .btn-group
                     a(:href="text.trailer" target="_blank").btn Trailer ansehen
-                    a(href="https://pfefferberg-theater.de/" target="_blank" rel="noopener").btn.btn-primary Tickets kaufen
+                    a(href="https://pfefferberg-theater.de/spielplan/kalender/?event-id=12575" target="_blank" rel="noopener").btn.btn-primary Tickets kaufen
         .intro(v-if="isEng")
             p {{text.en.intro}}
             .quote
