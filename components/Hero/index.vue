@@ -4,11 +4,15 @@
             .text(v-if="isEng")
                 img(:src="liarImg")
                 p {{text.en.subtitle}}
-                a(:href="text.trailer" target="_blank").btn Watch Trailer
+                .btn-group
+                    a(:href="text.trailer" target="_blank").btn Watch Trailer
+                    a(href="https://pfefferberg-theater.de/" target="_blank" rel="noopener").btn.btn-primary Buy Tickets
             .text(v-else)
                 img(:src="liarImg")
                 p {{text.de.subtitle}}
-                a(:href="text.trailer" target="_blank").btn Trailer ansehen
+                .btn-group
+                    a(:href="text.trailer" target="_blank").btn Trailer ansehen
+                    a(href="https://pfefferberg-theater.de/" target="_blank" rel="noopener").btn.btn-primary Tickets kaufen
         .intro(v-if="isEng")
             p {{text.en.intro}}
             .quote
@@ -101,6 +105,16 @@ export default {
             color white
             +bp($bp1)
                 font-size 1.4rem
+        .btn-group
+            +bp($bp1)
+                .btn
+                    display block
+            .btn
+                background #696BAC
+                color #000025
+            .btn-primary
+                background #F1B743
+                color #000025
 .intro
     section()
     .quote
